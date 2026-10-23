@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Invoice API</title></head>
+<body>
+<h1>Invoice API</h1>
+<p>Base URL: <code>https://api.nimbusledger.com/v1</code>. Authenticate with a bearer API key. Keys are workspace-scoped.</p>
+<h2>Rate limits</h2>
+<p>The invoice endpoints allow <strong>120 requests per minute</strong> per API key, with a burst of <strong>20 concurrent</strong> in-flight requests. Exceeding the limit returns HTTP 429 with a <code>Retry-After</code> header in seconds.</p>
+<p>Scale plan workspaces may request a raised cap; Starter and Growth cannot.</p>
+<h2>Create invoice</h2>
+<p><code>POST /invoices</code> accepts JSON with fields <code>entity_id</code>, <code>customer_id</code>, <code>currency</code>, <code>lines[]</code>, and optional <code>due_on</code>. Draft invoices do not increment journal-line usage. Posting an invoice creates an AR journal and counts toward the monthly line quota.</p>
+<h2>Idempotency</h2>
+<p>Pass header <code>Idempotency-Key</code> (UUIDv4). Keys are remembered for 24 hours. Replays return the original response, including errors.</p>
+<h2>Webhooks</h2>
+<p>Invoice posted, voided, and paid events are delivered to the workspace webhook URL. Failed deliveries retry <strong>8 times</strong> with exponential backoff starting at <strong>4 seconds</strong> (4, 8, 16, …). After 8 failures the event is dead-lettered and visible in the developer console for 14 days.</p>
+</body>
+</html>

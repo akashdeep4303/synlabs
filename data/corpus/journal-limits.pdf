@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 809 >> stream
+BT
+/F1 14 Tf
+50 760 Td
+(Journal import limits and CSV template) Tj
+0 -16 Td
+/F1 10 Tf
+() Tj
+0 -16 Td
+/F1 10 Tf
+(A single journal entry may contain at most 500 lines. Split larger files.) Tj
+0 -16 Td
+/F1 10 Tf
+(CSV columns: date, account, debit, credit, entity, memo, currency.) Tj
+0 -16 Td
+/F1 10 Tf
+(Dates must be ISO-8601. Debit and credit are mutually exclusive per line.) Tj
+0 -16 Td
+/F1 10 Tf
+(Imports over 10 MB should be split. The API import endpoint shares the invoice API rate li) Tj
+0 -16 Td
+/F1 10 Tf
+(mit of 120 requests per minute.) Tj
+0 -16 Td
+/F1 10 Tf
+(Balanced journals only: total debit must equal total credit in the journal currency before) Tj
+0 -16 Td
+/F1 10 Tf
+( FX translation.) Tj
+0 -16 Td
+/F1 10 Tf
+(Intercompany journals require both entities to belong to the same workspace.) Tj
+ET
+endstream endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001101 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1171
+%%EOF

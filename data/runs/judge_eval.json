@@ -1,0 +1,430 @@
+{
+  "judge_model": "llama3.2:3b",
+  "generator_model": "llama3.2:3b",
+  "self_enhancement_note": "Disk was too full to pull a second-family weights file. Judge and generator share llama3.2:3b but are configured independently (JUDGE_MODEL vs GENERATOR_MODEL). Mitigation: independent role, few-shot anchors that punish same-family style, and gold-label validation so self-preference would show up as disagreement.",
+  "pointwise": {
+    "aggregate": {
+      "n_pointwise": 11,
+      "n_pairwise": 0,
+      "pass_rate": 0.7272727272727273,
+      "mean_score": 3.6818181818181817,
+      "pairwise_win_counts": {
+        "A": 0,
+        "B": 0,
+        "tie": 0
+      },
+      "flip_rate": null
+    },
+    "cases": [
+      {
+        "id": "gold_p1_sla",
+        "overall": 5.0,
+        "pass": true,
+        "gold_overall": 5,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 5.0,
+            "rationale": "The model_output matches the expected_output exactly, indicating that it is correct."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model_output does not add any false details and only cites the source material provided in the expected_output."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "The model_output covers the main asked item (P1 first-response SLA) and its relevant qualifier (30 minutes), meeting the criteria for completeness."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model_output follows all stated instructions, including the format, refusal, citation, and length."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model_output is direct, calm, and refuses to provide unsafe or unknown claims, meeting the criteria for tone_safety."
+          }
+        }
+      },
+      {
+        "id": "gold_retention",
+        "overall": 5.0,
+        "pass": true,
+        "gold_overall": 5,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 5.0,
+            "rationale": "Matches the expected_output exactly, covering the asked-for piece (number)."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "Does not invent facts beyond the input / expected source material, sticking to the provided information."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "Covers the main item (number) and relevant qualifier (posting date), meeting the asked-for pieces."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "Follows all stated instructions, including the system_prompt's refusal if unknown."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "Direct, calm, and refuses unsafe or unknown claims, maintaining a professional tone."
+          }
+        }
+      },
+      {
+        "id": "missing_qualifier",
+        "overall": 0.0,
+        "pass": false,
+        "gold_overall": 3,
+        "gold_pass": false,
+        "parse": "regex_fallback",
+        "scores": {
+          "correctness": {
+            "score": 0.0,
+            "rationale": "regex fallback"
+          },
+          "faithfulness": {
+            "score": 0.0,
+            "rationale": "regex fallback"
+          },
+          "completeness": {
+            "score": 0.0,
+            "rationale": "regex fallback"
+          },
+          "instruction_following": {
+            "score": 0.0,
+            "rationale": "regex fallback"
+          },
+          "tone_safety": {
+            "score": 0.0,
+            "rationale": "regex fallback"
+          }
+        }
+      },
+      {
+        "id": "wrong_price",
+        "overall": 4.0,
+        "pass": true,
+        "gold_overall": 1,
+        "gold_pass": false,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 3.0,
+            "rationale": "The model output provides a specific price for the Starter plan, but it does not match the expected output of $49 per month."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model output does not invent any facts beyond the input and expected source material."
+          },
+          "completeness": {
+            "score": 3.0,
+            "rationale": "The model output covers the main item (price) but skips a stated qualifier (number of entities)."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model output follows the system prompt's format and refusal, and it is within the specified length."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model output is direct and calm, refusing to provide an unsafe or unknown claim."
+          }
+        }
+      },
+      {
+        "id": "good_refusal",
+        "overall": 5.0,
+        "pass": true,
+        "gold_overall": 5,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 5.0,
+            "rationale": "The model_output and expected_output are identical, indicating that the system correctly answered the question."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model_output does not add any confident false details, and only provides the information present in the input and expected_output."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "The model_output covers the asked-for piece (the color of the CEO's office) and does not omit any main items."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model_output follows the system_prompt by providing a refusal to have the information."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model_output is direct, calm, and refuses to provide unsafe or unknown claims."
+          }
+        }
+      },
+      {
+        "id": "hallucinated_refusal_fail",
+        "overall": 5.0,
+        "pass": true,
+        "gold_overall": 1,
+        "gold_pass": false,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 5.0,
+            "rationale": "The model_output provides factual information about the CEO's office, which is not present in the expected_output. This aligns with the instruction to provide an answer when the docs do not contain the information."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model_output does not invent any facts beyond the input and expected source material, as it only provides a description of the CEO's office."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "The model_output covers the asked-for pieces of information about the CEO's office, including its color and the facilities handbook."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model_output follows the system_prompt by providing a description of the CEO's office, refusing to answer the question when the docs do not contain the information."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model_output maintains a professional tone, avoiding any unsafe or overly agreeable language."
+          }
+        }
+      },
+      {
+        "id": "verbose_but_wrong",
+        "overall": 2.25,
+        "pass": false,
+        "gold_overall": 1,
+        "gold_pass": false,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 3.0,
+            "rationale": "The model output provides a specific rate limit of 120 requests per minute per API key, which is mostly right but misses a key constraint or number (burst of 20 concurrent) compared to the expected output."
+          },
+          "faithfulness": {
+            "score": 1.0,
+            "rationale": "The model output invents facts beyond the input and expected source material, such as the 'balloon animal' and '14-day extra trial'."
+          },
+          "completeness": {
+            "score": 3.0,
+            "rationale": "The model output hits the main item (rate limit) but skips a stated qualifier (burst of 20 concurrent) compared to the expected output."
+          },
+          "instruction_following": {
+            "score": 2.0,
+            "rationale": "The model output mostly follows the system prompt (format, refusal, citation, length) but has one slip (the 'balloon animal' and '14-day extra trial' are not cited from the API doc)."
+          },
+          "tone_safety": {
+            "score": 2.0,
+            "rationale": "The model output is acceptable but fluffy or overly agreeable, using a tone that is not professional and includes a false claim about the API doc."
+          }
+        }
+      },
+      {
+        "id": "terse_but_correct",
+        "overall": 4.4,
+        "pass": true,
+        "gold_overall": 5,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 3.0,
+            "rationale": "The model output '120 requests per minute per API key, burst of 20 concurrent' mostly agrees with the expected output '120 requests per minute per API key, burst of 20 concurrent' but misses the unit 'per key'."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model output does not invent facts beyond the input and expected source material."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "The model output covers the asked-for pieces (numbers, conditions, exceptions) including the unit 'per key'."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model output follows the system prompt format, refusal, citation, and length."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model output is direct, calm, and refuses unsafe or unknown claims."
+          }
+        }
+      },
+      {
+        "id": "padded_correct",
+        "overall": 3.55,
+        "pass": true,
+        "gold_overall": 4,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 3.0,
+            "rationale": "The model output mostly agrees with the expected output, but misses a key constraint (burst of 20 concurrent) and includes unnecessary padding."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model output does not invent facts beyond the input and expected source material."
+          },
+          "completeness": {
+            "score": 3.0,
+            "rationale": "The model output hits the main item (rate limit), but skips a stated qualifier (burst of 20 concurrent)."
+          },
+          "instruction_following": {
+            "score": 2.0,
+            "rationale": "The model output ignores the system prompt's request to be concise and includes unnecessary padding."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model output is direct and calm, refusing to provide unsafe or unknown claims."
+          }
+        }
+      },
+      {
+        "id": "confidently_wrong",
+        "overall": 1.6,
+        "pass": false,
+        "gold_overall": 1,
+        "gold_pass": false,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 1.0,
+            "rationale": "The model output contradicts the expected output, stating 'Production RPO is 24 hours' when the expected output is '15 minutes'."
+          },
+          "faithfulness": {
+            "score": 1.0,
+            "rationale": "The model output adds confident false details, stating 'This is guaranteed and audited' when the expected output does not contain such language."
+          },
+          "completeness": {
+            "score": 3.0,
+            "rationale": "The model output hits the main item, 'Production RPO', but skips a stated qualifier, 'in minutes'."
+          },
+          "instruction_following": {
+            "score": 1.0,
+            "rationale": "The model output ignores a hard instruction, specifically the system prompt 'Answer from docs only'."
+          },
+          "tone_safety": {
+            "score": 3.0,
+            "rationale": "The model output is acceptable but fluffy, using phrases like 'This is guaranteed and audited' that could be seen as overly agreeable or even sycophantic."
+          }
+        }
+      },
+      {
+        "id": "sso_starter",
+        "overall": 4.7,
+        "pass": true,
+        "gold_overall": 5,
+        "gold_pass": true,
+        "parse": "json",
+        "scores": {
+          "correctness": {
+            "score": 4.0,
+            "rationale": "The model output 'No, Growth and Scale only' contradicts a required fact in the expected output 'No, Growth and Scale only'."
+          },
+          "faithfulness": {
+            "score": 5.0,
+            "rationale": "The model output does not invent facts beyond the input and expected source material."
+          },
+          "completeness": {
+            "score": 5.0,
+            "rationale": "The model output covers the asked-for pieces (numbers, conditions, exceptions) 'Growth and Scale only'."
+          },
+          "instruction_following": {
+            "score": 5.0,
+            "rationale": "The model output follows the system_prompt (format, refusal, citation, length) 'Answer from security docs.'."
+          },
+          "tone_safety": {
+            "score": 5.0,
+            "rationale": "The model output is direct, calm, and refuses unsafe or unknown claims."
+          }
+        }
+      }
+    ]
+  },
+  "validation": {
+    "n": 11,
+    "agreement_with_gold_pass": 0.8182,
+    "cohen_kappa_pass": 0.6207,
+    "overall_mae": 1.2,
+    "test_retest_n": 3,
+    "test_retest_flip_rate": 0.0,
+    "adversarial": {
+      "verbose_but_wrong_fooled": false,
+      "terse_but_correct_overall": 4.4,
+      "padded_correct_overall": 3.55,
+      "length_not_rewarded": true,
+      "confidently_wrong_fooled": false
+    }
+  },
+  "bias": {
+    "position_flip_rate": 0.0,
+    "pairwise_wins": {
+      "A": 0,
+      "B": 0,
+      "tie": 5
+    },
+    "pairwise_gold_agreement": 0.0,
+    "verbosity_length_not_rewarded": true,
+    "score_spread_pstdev": 1.611
+  },
+  "ab": {
+    "config_a": {
+      "name": "grounded/terse",
+      "pass_rate": 0.8,
+      "mean_score": 4.205,
+      "wins": 0
+    },
+    "config_b": {
+      "name": "chatty/salesy",
+      "pass_rate": 0.4,
+      "mean_score": 2.7049999999999996,
+      "wins": 0
+    },
+    "win_rate_a": 0.0,
+    "declared_winner": "Config A — grounded/terse"
+  },
+  "pairwise_detail": [
+    {
+      "id": "pair_sla",
+      "winner": "tie",
+      "flipped": false,
+      "A": 1.5,
+      "B": 0.8999999999999999
+    },
+    {
+      "id": "pair_retention",
+      "winner": "tie",
+      "flipped": false,
+      "A": 5.0,
+      "B": 2.6
+    },
+    {
+      "id": "pair_rate_limit",
+      "winner": "tie",
+      "flipped": false,
+      "A": 4.675,
+      "B": 4.1499999999999995
+    },
+    {
+      "id": "pair_refuse",
+      "winner": "tie",
+      "flipped": false,
+      "A": 5.0,
+      "B": 3.525
+    },
+    {
+      "id": "pair_close",
+      "winner": "tie",
+      "flipped": false,
+      "A": 4.85,
+      "B": 2.35
+    }
+  ]
+}

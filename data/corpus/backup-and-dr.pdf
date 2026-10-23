@@ -1,0 +1,57 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 927 >> stream
+BT
+/F1 14 Tf
+50 760 Td
+(NimbusLedger backups and disaster recovery) Tj
+0 -16 Td
+/F1 10 Tf
+() Tj
+0 -16 Td
+/F1 10 Tf
+(Production RPO is 15 minutes. Production RTO is 4 hours.) Tj
+0 -16 Td
+/F1 10 Tf
+(Backups are encrypted with the same AES-256 keys as live data and stay in the workspace re) Tj
+0 -16 Td
+/F1 10 Tf
+(gion \(us-east-1 or eu-central-1\).) Tj
+0 -16 Td
+/F1 10 Tf
+(Point-in-time restore covers the last 14 days. Restores older than 14 days are full-backup) Tj
+0 -16 Td
+/F1 10 Tf
+( restores and take longer.) Tj
+0 -16 Td
+/F1 10 Tf
+(We test a regional failover twice a year. Customers are notified at least 14 days before a) Tj
+0 -16 Td
+/F1 10 Tf
+( planned DR test.) Tj
+0 -16 Td
+/F1 10 Tf
+(Sandbox is excluded from DR: sandbox workspaces are wiped every Sunday 00:00 UTC and are n) Tj
+0 -16 Td
+/F1 10 Tf
+(ot restored.) Tj
+0 -16 Td
+/F1 10 Tf
+(A failed restore that exceeds the 4-hour RTO is treated as a P1 incident.) Tj
+ET
+endstream endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001219 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1289
+%%EOF

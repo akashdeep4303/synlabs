@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Multi-currency</title></head>
+<body>
+<h1>Multi-currency ledger</h1>
+<p>NimbusLedger posts in <strong>42 currencies</strong>. Each entity has one functional currency, set at entity creation and immutable.</p>
+<h2>FX rates</h2>
+<p>Daily rates are sourced from the <strong>ECB 16:00 CET</strong> fix. Weekends and TARGET holidays reuse the last published rate. You may override a rate on a journal, which flags the line as <em>manual-fx</em> in audit.</p>
+<p>We do not ingest Bloomberg or Reuters mid-rates. Crypto-assets are not currencies in the ledger; record them as inventory accounts.</p>
+<h2>Translation</h2>
+<p>At period lock, monetary balances are remeasured at the period-end rate. CTA (cumulative translation adjustment) posts to equity account 3900 unless remapped.</p>
+<h2>Rounding</h2>
+<p>Amounts are stored at 6 decimal places internally and rounded to currency minor units on reports. A residual under 0.01 in functional currency is posted to 6950 FX rounding.</p>
+</body>
+</html>

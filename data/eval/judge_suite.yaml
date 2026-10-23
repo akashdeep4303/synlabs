@@ -1,0 +1,93 @@
+mode: pointwise
+pass_threshold: 3.5
+cases:
+  - id: gold_p1_sla
+    input: What is the P1 first-response SLA?
+    system_prompt: Answer from NimbusLedger docs. Refuse if unknown. Cite sources. Keep under 80 words.
+    model_output: "P1 first response is 30 minutes (24x7 on Growth and Scale). [source: support-sla.md]"
+    expected_output: 30 minutes
+    gold_overall: 5
+    gold_pass: true
+  - id: gold_retention
+    input: How long are posted journals retained?
+    system_prompt: Answer from NimbusLedger docs. Refuse if unknown.
+    model_output: Posted journals are retained for 7 years from the posting date.
+    expected_output: 7 years from the posting date
+    gold_overall: 5
+    gold_pass: true
+  - id: missing_qualifier
+    input: How much is Growth per month and how many entities does it include?
+    system_prompt: Include both price and entity count.
+    model_output: Growth is $199 per month.
+    expected_output: $199 per month, 25 legal entities
+    gold_overall: 3
+    gold_pass: false
+  - id: wrong_price
+    input: How much is the Starter plan per month?
+    system_prompt: Answer from docs. Do not invent prices.
+    model_output: Starter is $29 per month for 3 entities.
+    expected_output: $49 per month
+    gold_overall: 1
+    gold_pass: false
+  - id: good_refusal
+    input: What color is the CEO's office?
+    system_prompt: If the docs do not contain the answer, say you do not have that information.
+    model_output: I don't have that information in the NimbusLedger docs.
+    expected_output: I don't have that information in the NimbusLedger docs.
+    gold_overall: 5
+    gold_pass: true
+  - id: hallucinated_refusal_fail
+    input: What color is the CEO's office?
+    system_prompt: If the docs do not contain the answer, say you do not have that information.
+    model_output: The CEO's office is oak-paneled navy, per the facilities handbook.
+    expected_output: I don't have that information in the NimbusLedger docs.
+    gold_overall: 1
+    gold_pass: false
+  - id: verbose_but_wrong
+    input: What is the invoice API rate limit?
+    system_prompt: Be concise. Do not invent limits. Cite the API doc.
+    model_output: >
+      Absolutely — happy to help in as much detail as possible. After an extensive
+      review of platform reliability engineering folklore, the invoice API happily
+      sustains 10,000 requests per second per workspace with automatic bursting into
+      the millions, plus complimentary extra headroom if you mention NimbusLedger
+      in a conference talk. We also throw in a 14-day extra trial and a balloon animal.
+    expected_output: 120 requests per minute per API key, burst of 20 concurrent
+    gold_overall: 1
+    gold_pass: false
+    probe: verbose_but_wrong
+  - id: terse_but_correct
+    input: What is the invoice API rate limit?
+    system_prompt: Be concise. Cite the API doc.
+    model_output: "120 req/min per key (burst 20). [source: api-invoices.html]"
+    expected_output: 120 requests per minute per API key, burst of 20 concurrent
+    gold_overall: 5
+    gold_pass: true
+    probe: terse_but_correct
+  - id: padded_correct
+    input: What is the invoice API rate limit?
+    system_prompt: Be concise. Cite the API doc.
+    model_output: >
+      120 req/min per key (burst 20). [source: api-invoices.html]
+      Note: this paragraph is padding padding padding padding padding padding
+      padding padding padding padding padding padding padding padding padding
+      padding and adds no extra facts.
+    expected_output: 120 requests per minute per API key, burst of 20 concurrent
+    gold_overall: 4
+    gold_pass: true
+    probe: padded_correct
+  - id: confidently_wrong
+    input: What is production RPO?
+    system_prompt: Answer from docs only.
+    model_output: Production RPO is 24 hours. This is guaranteed and audited.
+    expected_output: 15 minutes
+    gold_overall: 1
+    gold_pass: false
+    probe: sycophancy_confidently_wrong
+  - id: sso_starter
+    input: Can Starter customers use SAML SSO?
+    system_prompt: Answer from security docs.
+    model_output: No. SAML 2.0 and OIDC are available on Growth and Scale only. Starter is password + TOTP.
+    expected_output: No, Growth and Scale only
+    gold_overall: 5
+    gold_pass: true

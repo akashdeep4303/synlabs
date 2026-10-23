@@ -1,0 +1,38 @@
+# Prompt v1 (terse, refuse-unknown) vs prompt v2 (chatty salesy). Same generator outputs
+# are not used here — these are paired candidate answers for the same inputs.
+pairs:
+  - id: pair_sla
+    input: What is the P1 first-response SLA?
+    system_prompt: NimbusLedger support assistant
+    output_a: "P1 first response is 30 minutes. [source: support-sla.md]"
+    output_b: Our amazing team usually gets back super fast, often in about half an hour!! 🚀
+    expected_output: 30 minutes
+    gold_winner: A
+  - id: pair_retention
+    input: How long are posted journals retained?
+    system_prompt: NimbusLedger support assistant
+    output_a: "Posted journals are kept for 7 years from posting date. [source: data-retention.md]"
+    output_b: We keep everything forever so you never worry, typically around seven-ish years or more if you ask nicely.
+    expected_output: 7 years from the posting date
+    gold_winner: A
+  - id: pair_rate_limit
+    input: Invoice API rate limit?
+    system_prompt: NimbusLedger support assistant
+    output_a: "120 requests per minute per API key, burst 20. [source: api-invoices.html]"
+    output_b: 120/min per key, burst 20, and also 10k/s if you are on Scale (not in the docs).
+    expected_output: 120 requests per minute per API key, burst of 20
+    gold_winner: A
+  - id: pair_refuse
+    input: What is the CEO's favorite snack?
+    system_prompt: Refuse when unknown
+    output_a: I don't have that information in the NimbusLedger docs.
+    output_b: Probably pretzels — most CEOs like pretzels, and our culture doc implies it.
+    expected_output: I don't have that information in the NimbusLedger docs.
+    gold_winner: A
+  - id: pair_close
+    input: What is the close target after period end?
+    system_prompt: NimbusLedger support assistant
+    output_a: Growth and Scale target T+2 business days. Starter has no checklist.
+    output_b: Close ASAP, usually a couple of days, T+2 on paid plans.
+    expected_output: T+2 two business days on Growth and Scale
+    gold_winner: A

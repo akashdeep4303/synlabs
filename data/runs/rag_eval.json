@@ -1,0 +1,1202 @@
+{
+  "ingest": {
+    "skipped": true
+  },
+  "retrieval": {
+    "k": 5,
+    "hit_rate": 1.0,
+    "recall_at_k": 1.0,
+    "mrr": 0.9125,
+    "ndcg_at_k": 0.9388,
+    "context_precision": 0.37,
+    "latency_ms": {
+      "p50": 135.58,
+      "p95": 215.06,
+      "mean": 174.25
+    },
+    "per_question": [
+      {
+        "id": "q01",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "pricing.md",
+          "pricing.md",
+          "support-sla.md",
+          "api-invoices.html",
+          "close-process.md"
+        ],
+        "gold": [
+          "pricing.md"
+        ]
+      },
+      {
+        "id": "q02",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "pricing.md",
+          "pricing.md",
+          "multi-currency.html",
+          "api-invoices.html",
+          "data-retention.md"
+        ],
+        "gold": [
+          "pricing.md"
+        ]
+      },
+      {
+        "id": "q03",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "data-retention.md",
+          "data-retention.md",
+          "api-invoices.html",
+          "journal-limits.pdf",
+          "close-process.md"
+        ],
+        "gold": [
+          "data-retention.md"
+        ]
+      },
+      {
+        "id": "q04",
+        "rank_first_relevant": 2,
+        "recall": 1.0,
+        "sources": [
+          "api-invoices.html",
+          "data-retention.md",
+          "api-invoices.html",
+          "data-retention.md",
+          "backup-and-dr.pdf"
+        ],
+        "gold": [
+          "data-retention.md"
+        ]
+      },
+      {
+        "id": "q05",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "data-retention.md",
+          "data-retention.md",
+          "backup-and-dr.pdf",
+          "api-invoices.html",
+          "close-process.md"
+        ],
+        "gold": [
+          "backup-and-dr.pdf",
+          "data-retention.md"
+        ]
+      },
+      {
+        "id": "q06",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "backup-and-dr.pdf",
+          "data-retention.md",
+          "support-sla.md",
+          "multi-currency.html",
+          "support-sla.md"
+        ],
+        "gold": [
+          "backup-and-dr.pdf",
+          "data-retention.md"
+        ]
+      },
+      {
+        "id": "q07",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "security-and-sso.md",
+          "pricing.md",
+          "multi-currency.html",
+          "close-process.md",
+          "data-retention.md"
+        ],
+        "gold": [
+          "security-and-sso.md"
+        ]
+      },
+      {
+        "id": "q08",
+        "rank_first_relevant": 2,
+        "recall": 1.0,
+        "sources": [
+          "close-process.md",
+          "security-and-sso.md",
+          "close-process.md",
+          "data-retention.md",
+          "security-and-sso.md"
+        ],
+        "gold": [
+          "security-and-sso.md"
+        ]
+      },
+      {
+        "id": "q09",
+        "rank_first_relevant": 4,
+        "recall": 1.0,
+        "sources": [
+          "support-sla.md",
+          "pricing.md",
+          "support-sla.md",
+          "security-and-sso.md",
+          "security-and-sso.md"
+        ],
+        "gold": [
+          "security-and-sso.md"
+        ]
+      },
+      {
+        "id": "q10",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "close-process.md",
+          "multi-currency.html",
+          "support-sla.md",
+          "multi-currency.html",
+          "support-sla.md"
+        ],
+        "gold": [
+          "close-process.md"
+        ]
+      },
+      {
+        "id": "q11",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "journal-limits.pdf",
+          "close-process.md",
+          "api-invoices.html",
+          "api-invoices.html",
+          "data-retention.md"
+        ],
+        "gold": [
+          "close-process.md",
+          "journal-limits.pdf"
+        ]
+      },
+      {
+        "id": "q12",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "close-process.md",
+          "close-process.md",
+          "pricing.md",
+          "api-invoices.html",
+          "api-invoices.html"
+        ],
+        "gold": [
+          "close-process.md"
+        ]
+      },
+      {
+        "id": "q13",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "api-invoices.html",
+          "api-invoices.html",
+          "journal-limits.pdf",
+          "pricing.md",
+          "pricing.md"
+        ],
+        "gold": [
+          "api-invoices.html"
+        ]
+      },
+      {
+        "id": "q14",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "api-invoices.html",
+          "support-sla.md",
+          "data-retention.md",
+          "support-sla.md",
+          "backup-and-dr.pdf"
+        ],
+        "gold": [
+          "api-invoices.html"
+        ]
+      },
+      {
+        "id": "q15",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "multi-currency.html",
+          "multi-currency.html",
+          "journal-limits.pdf",
+          "pricing.md",
+          "pricing.md"
+        ],
+        "gold": [
+          "multi-currency.html"
+        ]
+      },
+      {
+        "id": "q16",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "support-sla.md",
+          "support-sla.md",
+          "multi-currency.html",
+          "backup-and-dr.pdf",
+          "security-and-sso.md"
+        ],
+        "gold": [
+          "support-sla.md"
+        ]
+      },
+      {
+        "id": "q17",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "support-sla.md",
+          "support-sla.md",
+          "multi-currency.html",
+          "backup-and-dr.pdf",
+          "security-and-sso.md"
+        ],
+        "gold": [
+          "support-sla.md"
+        ]
+      },
+      {
+        "id": "q18",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "pricing.md",
+          "pricing.md",
+          "data-retention.md",
+          "security-and-sso.md",
+          "multi-currency.html"
+        ],
+        "gold": [
+          "pricing.md"
+        ]
+      },
+      {
+        "id": "q19",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "data-retention.md",
+          "data-retention.md",
+          "api-invoices.html",
+          "backup-and-dr.pdf",
+          "close-process.md"
+        ],
+        "gold": [
+          "data-retention.md"
+        ]
+      },
+      {
+        "id": "q20",
+        "rank_first_relevant": "n/a_unanswerable",
+        "recall": 1.0,
+        "sources": [
+          "pricing.md",
+          "support-sla.md",
+          "security-and-sso.md",
+          "pricing.md",
+          "support-sla.md"
+        ],
+        "gold": []
+      },
+      {
+        "id": "q21",
+        "rank_first_relevant": "n/a_unanswerable",
+        "recall": 1.0,
+        "sources": [
+          "api-invoices.html",
+          "security-and-sso.md",
+          "pricing.md",
+          "backup-and-dr.pdf",
+          "api-invoices.html"
+        ],
+        "gold": []
+      },
+      {
+        "id": "q22",
+        "rank_first_relevant": 1,
+        "recall": 1.0,
+        "sources": [
+          "security-and-sso.md",
+          "support-sla.md",
+          "pricing.md",
+          "close-process.md",
+          "close-process.md"
+        ],
+        "gold": [
+          "security-and-sso.md"
+        ]
+      }
+    ]
+  },
+  "answers": {
+    "em": 0.0909,
+    "f1": 0.3024,
+    "refusal_accuracy": 1.0,
+    "faithfulness_mean": 4.625,
+    "relevance_mean": 4.625,
+    "e2e_latency_ms": {
+      "p50": 5434.3,
+      "p95": 8207.0
+    },
+    "per_question": [
+      {
+        "id": "q01",
+        "answer": "1. The Growth plan costs $199 per month.\n2. The Growth plan includes 25 legal entities.",
+        "gold": "$199 per month and 25 legal entities",
+        "em": 0.0,
+        "f1": 0.3478,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 994,
+          "completion": 23,
+          "total": 1017
+        },
+        "citations": [
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.5383,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 1,
+            "similarity": 0.3724,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 1,
+            "similarity": 0.3584,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 0,
+            "similarity": 0.3243,
+            "doc_type": "html"
+          },
+          {
+            "source": "close-process.md",
+            "chunk_index": 1,
+            "similarity": 0.2966,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "answer": "[1] source=pricing.md type=markdown sim=0.519\nNimbusLedger is priced **entity-based, not seat-based**.",
+        "gold": "entity-based, not seat-based; unlimited seats",
+        "em": 0.0,
+        "f1": 0.1333,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 3,
+        "tokens": {
+          "prompt": 695,
+          "completion": 32,
+          "total": 727
+        },
+        "citations": [
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.5194,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 1,
+            "similarity": 0.4695,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "multi-currency.html",
+            "chunk_index": 0,
+            "similarity": 0.3456,
+            "doc_type": "html"
+          }
+        ]
+      },
+      {
+        "id": "q03",
+        "answer": "According to [2] source=data-retention.md type=markdown sim=0.566, posted journals are retained for **7 years** from the posting date.",
+        "gold": "7 years from the posting date",
+        "em": 0.0,
+        "f1": 0.2609,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 3,
+        "tokens": {
+          "prompt": 634,
+          "completion": 34,
+          "total": 668
+        },
+        "citations": [
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.6198,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.566,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 1,
+            "similarity": 0.339,
+            "doc_type": "html"
+          }
+        ]
+      },
+      {
+        "id": "q04",
+        "answer": "Draft invoices are retained for **90 days** of inactivity, then purged.",
+        "gold": "90 days of inactivity",
+        "em": 0.0,
+        "f1": 0.1333,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 991,
+          "completion": 18,
+          "total": 1009
+        },
+        "citations": [
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 1,
+            "similarity": 0.5939,
+            "doc_type": "html"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.5349,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 0,
+            "similarity": 0.501,
+            "doc_type": "html"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.4745,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "backup-and-dr.pdf",
+            "chunk_index": 0,
+            "similarity": 0.2901,
+            "doc_type": "pdf"
+          }
+        ]
+      },
+      {
+        "id": "q05",
+        "answer": "[1] source=data-retention.md type=markdown sim=0.366\nSandbox workspaces are wiped every **Sunday 00:00 UTC**.",
+        "gold": "every Sunday 00:00 UTC",
+        "em": 0.0,
+        "f1": 0.25,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 3,
+        "tokens": {
+          "prompt": 663,
+          "completion": 34,
+          "total": 697
+        },
+        "citations": [
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.587,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.3656,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "backup-and-dr.pdf",
+            "chunk_index": 0,
+            "similarity": 0.3602,
+            "doc_type": "pdf"
+          }
+        ]
+      },
+      {
+        "id": "q06",
+        "answer": "According to [1] source=backup-and-dr.pdf type=pdf sim=0.366, Production RPO (Recovery Point Objective) is 15 minutes, and Production RTO (Recovery Time Objective) is 4 hours.",
+        "gold": "RPO 15 minutes, RTO 4 hours",
+        "em": 0.0,
+        "f1": 0.3448,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 479,
+          "completion": 50,
+          "total": 529
+        },
+        "citations": [
+          {
+            "source": "backup-and-dr.pdf",
+            "chunk_index": 0,
+            "similarity": 0.366,
+            "doc_type": "pdf"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.2839,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q07",
+        "answer": "NimbusLedger holds **SOC 2 Type II** and **ISO 27001**.",
+        "gold": "SOC 2 Type II and ISO 27001",
+        "em": 0.0,
+        "f1": 0.375,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": 5.0,
+        "relevance": 5.0,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 1055,
+          "completion": 21,
+          "total": 1076
+        },
+        "citations": [
+          {
+            "source": "security-and-sso.md",
+            "chunk_index": 0,
+            "similarity": 0.4434,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.4219,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "multi-currency.html",
+            "chunk_index": 0,
+            "similarity": 0.3789,
+            "doc_type": "html"
+          },
+          {
+            "source": "close-process.md",
+            "chunk_index": 0,
+            "similarity": 0.3631,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.3333,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q08",
+        "answer": "I don't have that information in the NimbusLedger docs.",
+        "gold": "us-east-1 and eu-central-1",
+        "em": 0.0,
+        "f1": 0.0,
+        "refused": true,
+        "expect_refuse": false,
+        "faithfulness": 2.0,
+        "relevance": 2.0,
+        "chunk_count": 0,
+        "tokens": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "citations": []
+      },
+      {
+        "id": "q09",
+        "answer": "[5] source=security-and-sso.md type=markdown sim=0.310\n\nSSO is available on Growth and Scale, but not on Starter.",
+        "gold": "No. SAML 2.0 and OIDC are Growth and Scale only.",
+        "em": 0.0,
+        "f1": 0.16,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 1001,
+          "completion": 34,
+          "total": 1035
+        },
+        "citations": [
+          {
+            "source": "support-sla.md",
+            "chunk_index": 1,
+            "similarity": 0.3811,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.3642,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 0,
+            "similarity": 0.3597,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "security-and-sso.md",
+            "chunk_index": 1,
+            "similarity": 0.3557,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "security-and-sso.md",
+            "chunk_index": 0,
+            "similarity": 0.3101,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q10",
+        "answer": "The system target for a complete close checklist on Growth and Scale is **T+2** (two business days after period end).",
+        "gold": "T+2 two business days",
+        "em": 0.0,
+        "f1": 0.1667,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 1,
+        "tokens": {
+          "prompt": 312,
+          "completion": 27,
+          "total": 339
+        },
+        "citations": [
+          {
+            "source": "close-process.md",
+            "chunk_index": 0,
+            "similarity": 0.3955,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q11",
+        "answer": "[1] source=journal-limits.pdf type=pdf sim=0.605\nA single journal entry may contain at most **500 lines**.",
+        "gold": "500 lines",
+        "em": 0.0,
+        "f1": 0.0,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 959,
+          "completion": 32,
+          "total": 991
+        },
+        "citations": [
+          {
+            "source": "journal-limits.pdf",
+            "chunk_index": 0,
+            "similarity": 0.6051,
+            "doc_type": "pdf"
+          },
+          {
+            "source": "close-process.md",
+            "chunk_index": 1,
+            "similarity": 0.418,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 1,
+            "similarity": 0.3682,
+            "doc_type": "html"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 0,
+            "similarity": 0.3576,
+            "doc_type": "html"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.2876,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q12",
+        "answer": "[1] source=close-process.md type=markdown sim=0.414\n\nAccording to the documentation, a workspace may use a **4-4-5** retail calendar instead of calendar months, but it cannot mix 4-4-5 and calendar months in the same entity.",
+        "gold": "No, you cannot mix them in the same entity",
+        "em": 0.0,
+        "f1": 0.2439,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 511,
+          "completion": 60,
+          "total": 571
+        },
+        "citations": [
+          {
+            "source": "close-process.md",
+            "chunk_index": 1,
+            "similarity": 0.4141,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "close-process.md",
+            "chunk_index": 0,
+            "similarity": 0.3298,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q13",
+        "answer": "The invoice API rate limit per API key is 120 requests per minute, with a burst of 20 concurrent in-flight requests.",
+        "gold": "120 requests per minute, burst of 20 concurrent",
+        "em": 0.0,
+        "f1": 0.5517,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 986,
+          "completion": 27,
+          "total": 1013
+        },
+        "citations": [
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 0,
+            "similarity": 0.6855,
+            "doc_type": "html"
+          },
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 1,
+            "similarity": 0.5106,
+            "doc_type": "html"
+          },
+          {
+            "source": "journal-limits.pdf",
+            "chunk_index": 0,
+            "similarity": 0.398,
+            "doc_type": "pdf"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 1,
+            "similarity": 0.3522,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.3174,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q14",
+        "answer": "According to [1] source=api-invoices.html type=html sim=0.511, webhooks are retried 8 times with exponential backoff starting at 4 seconds (4, 8, 16, …).",
+        "gold": "8 times, exponential backoff starting at 4 seconds",
+        "em": 0.0,
+        "f1": 0.4667,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 5,
+        "tokens": {
+          "prompt": 934,
+          "completion": 49,
+          "total": 983
+        },
+        "citations": [
+          {
+            "source": "api-invoices.html",
+            "chunk_index": 1,
+            "similarity": 0.5111,
+            "doc_type": "html"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 0,
+            "similarity": 0.3306,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.3282,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 1,
+            "similarity": 0.3197,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "backup-and-dr.pdf",
+            "chunk_index": 0,
+            "similarity": 0.302,
+            "doc_type": "pdf"
+          }
+        ]
+      },
+      {
+        "id": "q15",
+        "answer": "According to the NimbusLedger documentation, the ledger supports 42 currencies. FX rates are sourced from the ECB 16:00 CET fix, with weekends and TARGET holidays reusing the last published rate.",
+        "gold": "42 currencies, ECB 16:00 CET fix",
+        "em": 0.0,
+        "f1": 0.2222,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 404,
+          "completion": 42,
+          "total": 446
+        },
+        "citations": [
+          {
+            "source": "multi-currency.html",
+            "chunk_index": 0,
+            "similarity": 0.5955,
+            "doc_type": "html"
+          },
+          {
+            "source": "multi-currency.html",
+            "chunk_index": 1,
+            "similarity": 0.3454,
+            "doc_type": "html"
+          }
+        ]
+      },
+      {
+        "id": "q16",
+        "answer": "The P1 first-response SLA is 30 minutes for Growth and Scale and 15 minutes for Premium support (add-on).",
+        "gold": "30 minutes",
+        "em": 0.0,
+        "f1": 0.2,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 440,
+          "completion": 27,
+          "total": 467
+        },
+        "citations": [
+          {
+            "source": "support-sla.md",
+            "chunk_index": 0,
+            "similarity": 0.4285,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 1,
+            "similarity": 0.3634,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q17",
+        "answer": "The P3 first-response SLA is \"next business day\".",
+        "gold": "next business day",
+        "em": 0.0,
+        "f1": 0.1818,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 440,
+          "completion": 14,
+          "total": 454
+        },
+        "citations": [
+          {
+            "source": "support-sla.md",
+            "chunk_index": 0,
+            "similarity": 0.3983,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "support-sla.md",
+            "chunk_index": 1,
+            "similarity": 0.2868,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q18",
+        "answer": "I don't have that information in the NimbusLedger docs.",
+        "gold": "No. OSS is supported; MOSS is not.",
+        "em": 0.0,
+        "f1": 0.0,
+        "refused": true,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 4,
+        "tokens": {
+          "prompt": 896,
+          "completion": 14,
+          "total": 910
+        },
+        "citations": [
+          {
+            "source": "pricing.md",
+            "chunk_index": 1,
+            "similarity": 0.5396,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "pricing.md",
+            "chunk_index": 0,
+            "similarity": 0.4045,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.3325,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "security-and-sso.md",
+            "chunk_index": 0,
+            "similarity": 0.2906,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q19",
+        "answer": "According to the documentation, audit logs are retained for **18 months**.",
+        "gold": "18 months",
+        "em": 0.0,
+        "f1": 0.0,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 2,
+        "tokens": {
+          "prompt": 487,
+          "completion": 16,
+          "total": 503
+        },
+        "citations": [
+          {
+            "source": "data-retention.md",
+            "chunk_index": 1,
+            "similarity": 0.5828,
+            "doc_type": "markdown"
+          },
+          {
+            "source": "data-retention.md",
+            "chunk_index": 0,
+            "similarity": 0.5334,
+            "doc_type": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "q20",
+        "answer": "I don't have that information in the NimbusLedger docs.",
+        "gold": "I don't have that information in the NimbusLedger docs.",
+        "em": 1.0,
+        "f1": 1.0,
+        "refused": true,
+        "expect_refuse": true,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 0,
+        "tokens": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "citations": []
+      },
+      {
+        "id": "q21",
+        "answer": "I don't have that information in the NimbusLedger docs.",
+        "gold": "I don't have that information in the NimbusLedger docs.",
+        "em": 1.0,
+        "f1": 1.0,
+        "refused": true,
+        "expect_refuse": true,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 0,
+        "tokens": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "citations": []
+      },
+      {
+        "id": "q22",
+        "answer": "1. source=security-and-sso.md type=markdown sim=0.325\nCustom roles are Scale-only.",
+        "gold": "No. Custom roles are Scale-only.",
+        "em": 0.0,
+        "f1": 0.6154,
+        "refused": false,
+        "expect_refuse": false,
+        "faithfulness": null,
+        "relevance": null,
+        "chunk_count": 1,
+        "tokens": {
+          "prompt": 312,
+          "completion": 25,
+          "total": 337
+        },
+        "citations": [
+          {
+            "source": "security-and-sso.md",
+            "chunk_index": 1,
+            "similarity": 0.3254,
+            "doc_type": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "cost": {
+    "assumptions": {
+      "embedding_dim": 384,
+      "bytes_per_vector_disk": 1800,
+      "chroma_vm_100k": {
+        "spec": "1 vCPU / 2 GB / 20 GB SSD",
+        "usd_mo": 6
+      },
+      "chroma_vm_1m": {
+        "spec": "2 vCPU / 4 GB / 40 GB SSD",
+        "usd_mo": 12
+      },
+      "chroma_vm_10m": {
+        "spec": "8 vCPU / 32 GB / 200 GB SSD (HNSW in RAM)",
+        "usd_mo": 80
+      },
+      "managed": "Pinecone p1 pod family, us-east, 1 replica, 0 queries included in pod price",
+      "pinecone_p1_x1_usd_mo": 70,
+      "pinecone_capacity_note": "p1.x1 ~100k x 768-d; 384-d roughly 2x vectors per pod. 1M needs ~5 p1.x1. 10M needs p2 or ~50 p1.",
+      "query_volume": "lightly queried: 1 QPS peak, 2M queries/month — pod price still paid idle"
+    },
+    "rows": [
+      {
+        "vectors": "100K",
+        "chroma_usd_mo": 6,
+        "managed_usd_mo": 70,
+        "savings_usd_mo": 64
+      },
+      {
+        "vectors": "1M",
+        "chroma_usd_mo": 12,
+        "managed_usd_mo": 350,
+        "savings_usd_mo": 338
+      },
+      {
+        "vectors": "10M",
+        "chroma_usd_mo": 80,
+        "managed_usd_mo": 1400,
+        "savings_usd_mo": 1320
+      }
+    ]
+  },
+  "config": {
+    "chunk_size": 800,
+    "chunk_overlap": 150,
+    "top_k": 5,
+    "similarity_threshold": 0.28,
+    "embedding_model": "onnx-minilm-l6-v2",
+    "embedding_dim": 384,
+    "generator_model": "llama3.2:3b",
+    "judge_model": "llama3.2:3b",
+    "store": "chromadb"
+  }
+}
